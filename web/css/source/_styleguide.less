@@ -111,6 +111,31 @@
             }
         }
     }
+    .banner-burning-one {
+        .lib-css(width, 330px);
+        .lib-css(height, 280px);
+
+        .banner-img {
+            .lib-css(position, relative);
+            .lib-css(width, 100%);
+        }
+    }
+   
+    .button-banner {
+        .lib-button(@_button-background:  @color-333,
+        @_button-color: @color-white,
+        @_button-font-family: @font-roboto-bold,
+        @_button-background-hover: @color-3b,
+        @_button-color-hover: @color-white,
+        @_button-border: @size-1px solid @color-white);
+        .lib-css(width, 250px);
+        .lib-css(height, 50px);
+        .lib-css(padding, 7px 0);
+        .lib-css(position, absolute);
+        .lib-css(transform, translate(-50%, -50%));
+        .lib-css(top, 50%);
+        .lib-css(left, 50%);
+    }
 
     // input field
     input,
