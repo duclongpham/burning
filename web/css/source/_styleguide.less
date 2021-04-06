@@ -47,9 +47,16 @@
   // button
   button {
     .lib-css(border-radius, 0);
+<<<<<<< HEAD
     .lib-css(max-width, @size-200);
     .lib-css(text-transform, uppercase);
     .lib-button(@_button-background: @color-green-default,
+=======
+    .lib-css(text-transform, uppercase);
+
+    &.primary {
+      .lib-button(@_button-background: @color-green-default,
+>>>>>>> master
             @_button-background-active: @color-green-standard,
             @_button-font-family: @font-roboto-bold,
             @_button-color: @color-white,
@@ -58,6 +65,7 @@
             @_button-border: @size-1px solid @color-green-default,
             @_button-font-size: @font-size13,
             @_button-background-hover: @color-green-standard,
+<<<<<<< HEAD
             );
 
     &.active {
@@ -69,6 +77,22 @@
       color: @color-white;
     }
 
+=======
+      );
+      .lib-css(box-shadow, none);
+    }
+    
+
+    &.active {
+      background: @color-green-standard;
+    }
+
+    &:visited {
+      background: @color-green-standard;
+      color: @color-white;
+    }
+    
+>>>>>>> master
     //standard button
     &.standard-button,
     &.action.tocart.primary {
@@ -79,9 +103,18 @@
                 @_button-background-hover: @color-black,
                 @_button-font-family: @font-roboto-bold,
                 @_button-color-active: @color-white,
+<<<<<<< HEAD
                 @_button-background-active: @color-black);
     }
 
+=======
+                @_button-background-active: @color-black
+      );
+
+      .lib-css(box-shadow, none);
+    }
+    
+>>>>>>> master
     //standard balck button
     &.standard-button-black {
       .standard-button;
@@ -113,6 +146,13 @@
     }
   }
 
+<<<<<<< HEAD
+=======
+  .adjust-button {
+    .lib-css(display, flex);
+  }
+
+>>>>>>> master
   // input field
   input,
   select,
@@ -132,8 +172,12 @@
 
     //input adjust
     &.input-adjust {
+<<<<<<< HEAD
       .lib-css(margin, 0px -5px);
       .lib-css(padding-bottom, 3px);
+=======
+      .lib-css(margin, 0px -1px);
+>>>>>>> master
       .lib-css(max-width, 40px);
       .lib-css(max-height, 40px);
       .lib-css(text-align, center);
