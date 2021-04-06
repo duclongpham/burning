@@ -1,0 +1,83 @@
+input {
+    &:not([disabled]):focus {
+        .lib-css(box-shadow, none);
+    }
+    
+    //input adjust
+    &.input-adjust {
+        .lib-css(margin, 0px -5px);
+        .lib-css(padding-bottom, 3px);
+        .lib-css(max-width, 40px);
+        .lib-css(max-height, 40px);
+        .lib-css(text-align, center);
+        .lib-css(color, @color-333);
+    }
+
+    // input checkbox
+    &[type='checkbox'] {
+        .lib-css(visibility, hidden);
+
+        &:checked+label:before {
+            .lib-css(background, @color-white);
+            .lib-css(color, @color-black);
+            .lib-css(content, "");
+            .lib-css(text-align, center);
+            .lib-css(font-size, @size-20px);
+        }
+
+        &:checked+label:after {
+            .lib-css(content, "");
+            .lib-css(width, 5px);
+            .lib-css(height, 8px);
+            .lib-css(border-width, 0 2px 2px 0);
+            .lib-css(border-style, solid);
+            .lib-css(border-color, @color-black);
+            .lib-css(transform, rotate(45deg));
+            .lib-css(position, absolute);
+            .lib-css(left, 0);
+            .lib-css(margin, 4px 4px 4px 8px);
+        }
+
+        &+label:before {
+            .lib-css(border, @size-1px solid @color-ddd);
+            .lib-css(content, "");
+            .lib-css(display, inline-block);
+            .lib-css(margin, 0 10px -6px 0);
+            .lib-css(padding, 0);
+            .lib-css(vertical-align, top);
+            .lib-css(width, @size-20px);
+            .lib-css(height, @size-20px);
+        }
+    }
+
+    //input radio
+    &[type="radio"] {
+        .lib-css(visibility, hidden);
+
+        &:checked+label:after {
+            .lib-css(background, @color-333);
+            .lib-css(color, @color-white);
+            .lib-css(content, "");
+            .lib-css(text-align, center);
+            .lib-css(width, 8px);
+            .lib-css(height, 8px);
+            .lib-css(position, absolute);
+            .lib-css(left, 0);
+            .lib-css(margin, 7px);
+            .lib-css(border-radius, 50%);
+        }
+
+        &+label:before {
+            .lib-css(border-radius, 50%);
+            .lib-css(vertical-align, baseline);
+            .lib-css(border, @size-1px solid @color-ddd);
+            .lib-css(content, "");
+            .lib-css(display, inline-block);
+            .lib-css(margin, 0 10px -6px 0);
+            .lib-css(padding, 0);
+            .lib-css(vertical-align, top);
+            .lib-css(width, @size-20px);
+            .lib-css(height, @size-20px);
+        }
+    }
+}
