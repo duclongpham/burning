@@ -3,7 +3,7 @@
 //  * See COPYING.txt for license details.
 //  */
 
-@import 'module/_collapsible_navigation.less';
+@import "module/_collapsible_navigation.less";
 
 //
 //  Theme variables
@@ -40,8 +40,10 @@
 @price-size: 22px;
 @price-size-desktop: 36px;
 
-@button__shadow: inset 0 1px 0 0 rgba(255, 255, 255, 1), inset 0 -1px 0 0 fade(@border-color__base, 30); // Used for secondary button and catalog toolbar controls
-@button__shadow-active: inset 0 1px 0 0 fade(@border-color__base, 80), inset 0 -1px 0 0 fade(@border-color__base, 30); // Used for secondary button and catalog toolbar controls
+@button__shadow: inset 0 1px 0 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 0 fade(@border-color__base, 30); // Used for secondary button and catalog toolbar controls
+@button__shadow-active: inset 0 1px 0 0 fade(@border-color__base, 80),
+    inset 0 -1px 0 0 fade(@border-color__base, 30); // Used for secondary button and catalog toolbar controls
 
 @h1__margin-bottom__desktop: @indent__xl;
 
@@ -130,8 +132,6 @@
                 }
             }
         }
-
-        
     }
 
     .header {
@@ -142,18 +142,36 @@
 
         .lib-css(display, flex);
         &--top__left {
-
+            .lib-typography(
+                @_font-size: 14px,
+                @_font-family: "Roboto",
+                @_font-weight: 500,
+                @_line-height: 20px,
+                @_color: @color-white
+            );
         }
         &--top__middle > ul {
             .lib-css(display, inline-flex);
             margin-bottom: 0;
             padding-left: 0;
             > li:first-child {
-                list-style: none;
                 margin-left: 0;
                 margin-bottom: 0;
+                &:before {
+                    display: none;
+                }
             }
             > li {
+                .lib-icon-font(
+                    "\f111",
+                    @_icon-font: "Font Awesome 5 Free",
+                    @_icon-font-size: 5px,
+                    @_icon-font-margin: 0 10px 0 10px,
+                );
+                &:before {
+                    font-weight: 900;
+                }
+                list-style: none;
                 margin-left: 30px;
                 margin-bottom: 0;
             }
@@ -166,7 +184,7 @@
         &--top__right {
             p {
                 display: inline;
-                margin-left: 10px;
+                margin-left: 11px;
             }
         }
         p {
@@ -316,7 +334,6 @@
     }
 
     .copyright {
-        
     }
 
     .page-header,
@@ -429,7 +446,11 @@
 //  Navigation
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
     .customer-name,
     .customer-welcome + .authorization-link {
         display: none;
@@ -488,7 +509,11 @@
     }
 }
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
     .logo {
         margin-bottom: 13px;
         margin-top: 4px;
@@ -499,7 +524,11 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
     .cms-page-view .page-main {
         padding-top: 0;
         position: relative;
@@ -510,7 +539,11 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__m) {
     html,
     body {
         height: 100%; // Stretch screen area for sticky footer
@@ -530,8 +563,8 @@
         }
 
         .header.panel:extend(.abs-add-clearfix-desktop all) {
-            padding-bottom: @indent__s;
-            padding-top: @indent__s;
+            padding-bottom: 8px;
+            padding-top: 8px;
         }
 
         .switcher {
@@ -557,8 +590,8 @@
 
     .customer-welcome {
         .lib-dropdown(
-        @_toggle-selector: ~'.action.switch',
-        @_options-selector: ~'ul',
+        @_toggle-selector: ~".action.switch",
+        @_options-selector: ~"ul",
         @_dropdown-actions-padding: 0,
         @_dropdown-list-item-padding: 0,
         @_dropdown-toggle-icon-content: @icon-down,
@@ -683,7 +716,7 @@
     .page-wrapper {
         margin: 0;
         position: relative;
-        transition: margin .3s ease-out 0s;
+        transition: margin 0.3s ease-out 0s;
 
         > .breadcrumbs,
         > .top-container,
@@ -764,4 +797,3 @@
         }
     }
 }
-

@@ -8,13 +8,13 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
     //  Newsletter subscription
     .block.newsletter {
         margin-bottom: 20px;
 
         .form.subscribe {
             display: table;
+            position: relative;
             width: 100%;
         }
 
@@ -29,14 +29,6 @@
             margin: 0;
 
             .control {
-                .lib-icon-font(
-                @icon-envelope,
-                @_icon-font-size: 16px,
-                @_icon-font-line-height: 32px,
-                @_icon-font-color: @form-element-input-placeholder__color,
-                @_icon-font-margin: 0 0 0 8px
-                );
-
                 &:before {
                     position: absolute;
                 }
@@ -46,8 +38,10 @@
         }
 
         input {
-            margin-right: 35px;
-            padding: 0 0 0 35px; // Reset some default Safari padding values.
+            //margin-right: 35px;
+            //padding: 0 0 0 35px; // Reset some default Safari padding values.
+            width: 280px;
+            height: 42px;
         }
 
         .title {
@@ -59,16 +53,53 @@
         }
 
         .actions {
-            display: table-cell;
-            vertical-align: top;
-            width: 1%;
+            //   display: table-cell;
+            //   vertical-align: top;
+            //   width: 1%;
+            position: absolute;
+            top: 1px;
+            left: auto;
+            right: 1px;
+            width: 42px;
+            height: 42px;
         }
-
+        .action.primary {
+            .lib-icon-font(
+                "\f054",
+                @_icon-font: "Font Awesome 5 Free",
+                @_icon-font-size: 12px,
+                @_icon-font-line-height: 24px,
+                @_icon-font-color: @color-gray-darken4
+            );
+            &:before {
+                font-weight: 900;
+            }
+            .lib-button(
+                @_button-font-size: 42px,
+                @_button-width: 42px,
+                @_button-line-height: 30px,
+                @_button-margin: 0,
+                @_button-padding: 0,
+                @_button-color: black,
+                @_button-background: rgba(0,0,0,0),
+                @_button-border: 0,
+                @_button-color-hover: false ,
+                @_button-background-hover: false ,
+                @_button-border-hover: false ,
+                @_button-color-active: false ,
+                @_button-background-active: false ,
+                @_button-border-active: false 
+            );
+        }
         .action.subscribe {
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
             margin-left: -1px;
             white-space: nowrap;
+
+            span {
+                display: none;
+            }
         }
     }
 }
@@ -77,7 +108,11 @@
 //  Desktop
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+.media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__m) {
     .block.newsletter {
         max-width: 44%;
         width: max-content;
@@ -88,7 +123,11 @@
 //  Mobile
 //  _____________________________________________
 
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__m) {
     .block {
         &.newsletter {
             input {

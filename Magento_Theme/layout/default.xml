@@ -26,21 +26,19 @@
 
         <referenceContainer name='footer-container'>
             <container name='footer-showroom' htmlTag='div' htmlClass='footer-showroom'>
-                <container name='footer-showroom-content' htmlTag='div' htmlClass='footer-container'>
-                    <block template='Magento_Theme::footer/showroom.phtml' class='Magento\Framework\View\Element\Template'></block>
-                </container>
+                <block template='Magento_Theme::footer/showroom.phtml' class='Magento\Framework\View\Element\Template'></block>
             </container>
             <container name='footer-banner' htmlTag='div' htmlClass='footer-banner'>
                 <block template='Magento_Theme::footer/banner.phtml' class='Magento\Framework\View\Element\Template'></block>
             </container>
             <container name='footer-top' htmlTag='div' htmlClass='footer-top'>
-                <container name='footer-top-content' htmlTag='div' htmlClass='footer-container'>
-                    <block template='Magento_Theme::footer/top.phtml' class='Magento\Framework\View\Element\Template'></block>
-                </container>
+                <block template='Magento_Theme::footer/top.phtml' class='Magento\Framework\View\Element\Template'></block>
             </container>
             <container name='footer-middle' htmlTag='div' htmlClass='footer-middle' after='footer-top'>
                 <container name='footer-middle-content' htmlTag='div' htmlClass='footer-container'>
                     <block template='Magento_Theme::footer/middle.phtml' class='Magento\Framework\View\Element\Template'></block>
+                    <container name='footer-middle-newsletter' htmlTag='div' htmlClass='footer-newsletter' after='-'>
+                    </container>
                 </container>
             </container>
             <container name='footer-bottom' htmlTag='div' htmlClass='footer-bottom'>
