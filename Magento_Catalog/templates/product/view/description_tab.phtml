@@ -1,0 +1,61 @@
+<?php
+ 
+$product = $block->getProduct();
+ 
+?>
+<?php echo $product->getData('description'); ?>
+
+<?php
+
+    echo $block->getLayout()
+
+            ->createBlock('Magento\Cms\Block\Block')
+
+            ->setBlockId('blog')
+
+            ->toHtml();
+
+?>
+
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $(".product-items").slick({
+                rows: 1,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: false,
+                infinite: false,
+                arrows: false,
+                speed: 300,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            rows: 1,
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            rows: 1,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: false,
+                            arrows: false,
+                            infinite: true
+                        }
+                    }
+                ]
+            });
+        });
+    });
+</script>
