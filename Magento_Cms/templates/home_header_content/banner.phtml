@@ -1,0 +1,7 @@
+<div class="banner-desktop desktop">
+  <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_top')->toHtml(); ?>
+</div>
+
+<script>
+  $('.banner-desktop desktop').insertBefore('.homepage-products');
+</script>
