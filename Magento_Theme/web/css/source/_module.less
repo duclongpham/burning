@@ -93,7 +93,7 @@
 
     .page-header {
         .lib-css(background-color, @header__background-color);
-        border-bottom: 1px solid @border-color__base;
+        // border-bottom: 1px solid @border-color__base;
         margin-bottom: @indent__base;
 
         .panel.wrapper {
@@ -107,7 +107,6 @@
             .lib-list-inline();
             float: right;
             font-size: 0;
-            margin-left: auto;
             margin-right: @indent__base;
 
             > li {
@@ -120,17 +119,35 @@
 
                 > a {
                     .lib-link(
-                    @_link-color: @header-panel__text-color,
-                    @_link-text-decoration: none,
-                    @_link-color-visited: @header-panel__text-color,
-                    @_link-text-decoration-visited: none,
-                    @_link-color-hover: @header-panel__text-color,
-                    @_link-text-decoration-hover: underline,
-                    @_link-color-active: @header-panel__text-color,
-                    @_link-text-decoration-active: underline
+                        @_link-color: @header-panel__text-color,
+                        @_link-text-decoration: none,
+                        @_link-color-visited: @header-panel__text-color,
+                        @_link-text-decoration-visited: none,
+                        @_link-color-hover: @header-panel__text-color,
+                        @_link-text-decoration-hover: underline,
+                        @_link-color-active: @header-panel__text-color,
+                        @_link-text-decoration-active: underline
                     );
                 }
             }
+        }
+        .lib-css(display, flex);
+        .lib-typography-letter(
+            @_font-family: "Roboto-Regular",
+            @_font-weight: 500,
+            @_line-height: 20px,
+            @_color: @color-white
+        );
+        p {
+            margin-bottom: 0;
+        }
+        white-space: nowrap;
+        a {
+            .lib-button-as-link(
+                @_link-color: @color-white,
+                @_link-color-hover: @color-white,
+                @_padding: 0
+            );
         }
     }
 
@@ -138,22 +155,27 @@
         &.content:extend(.abs-add-clearfix all) {
             padding-top: @indent__s;
             position: relative;
+            padding-top: 4px;
         }
-
-        .lib-css(display, flex);
+        display: block;
         &--top__left {
-            .lib-typography(
-                @_font-size: 14px,
-                @_font-family: "Roboto",
-                @_font-weight: 500,
-                @_line-height: 20px,
-                @_color: @color-white
-            );
+            .mobi {
+                .lib-icon-Awesome(
+                    "\f3c5",
+                    @_icon-font: "Font Awesome 5 Free",
+                    @_icon-font-size: 12px,
+                    @_icon-font-margin: 0 10px 0 10px,
+                    @_icon-font-color: @color-white
+                );
+                display: none;
+            }
         }
         &--top__middle > ul {
             .lib-css(display, inline-flex);
             margin-bottom: 0;
             padding-left: 0;
+            letter-spacing: 0.005em;
+            margin-right: 40px;
             > li:first-child {
                 margin-left: 0;
                 margin-bottom: 0;
@@ -172,13 +194,49 @@
                     font-weight: 900;
                 }
                 list-style: none;
-                margin-left: 30px;
                 margin-bottom: 0;
             }
         }
 
         &--top__middle {
-            margin: auto auto;
+            margin: 0 auto;
+            @media only screen and (max-width: 1024px) {
+                overflow: hidden;
+                margin: 0 5px;
+                .desktop {
+                    width: fit-content;
+                    .lib-css(transform, translateX(-100%));
+                    -moz-animation: bouncing-text 20s linear infinite;
+                    -webkit-animation: bouncing-text 20s linear infinite;
+                    animation: bouncing-text 20s linear infinite;
+                    @-moz-keyframes bouncing-text {
+                        0% {
+                            .lib-css(transform, translateX(-100%));
+                        }
+                        100% {
+                            .lib-css(transform, translateX(10%));
+                        }
+                    }
+
+                    @-webkit-keyframes bouncing-text {
+                        0% {
+                            .lib-css(transform, translateX(-100%));
+                        }
+                        100% {
+                            .lib-css(transform, translateX(10%));
+                        }
+                    }
+
+                    @keyframes bouncing-text {
+                        0% {
+                            .lib-css(transform, translateX(-100%));
+                        }
+                        100% {
+                            .lib-css(transform, translateX(10%));
+                        }
+                    }
+                }
+            }
         }
 
         &--top__right {
@@ -186,9 +244,17 @@
                 display: inline;
                 margin-left: 11px;
             }
-        }
-        p {
-            margin-bottom: 0;
+
+            .mobi {
+                .lib-icon-Awesome(
+                    "\f879",
+                    @_icon-font: "Font Awesome 5 Free",
+                    @_icon-font-size: 12px,
+                    @_icon-font-margin: 0 10px 0 10px,
+                    @_icon-font-color: @color-white
+                );
+                display: none;
+            }
         }
     }
 
@@ -508,7 +574,6 @@
         }
     }
 }
-
 .media-width(@extremum, @break)
     when
     (@extremum = "max")
@@ -517,6 +582,31 @@
     .logo {
         margin-bottom: 13px;
         margin-top: 4px;
+        float: none;
+        img {
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .header {
+        .desktop {
+            display: none;
+        }
+
+        .mobi {
+            display: inline;
+        }
+        &--top__middle {
+            display: none;
+        }
+        &--top__right {
+            width: 100%;
+            .mobi {
+                float: right;
+            }
+        }
     }
 }
 
@@ -701,7 +791,7 @@
         }
 
         &.content:extend(.abs-add-clearfix-desktop all) {
-            padding: @indent__l @indent__base 0;
+            padding: @indent__base+3 @indent__base 0;
         }
     }
 

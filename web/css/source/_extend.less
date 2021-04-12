@@ -2,15 +2,47 @@
 @import "_footer.less";
 & when (@media-common = true) {
 }
-.minicart-wrapper .action.showcart:before {
-  color: @color-red13;
-}
 
 .footer-container {
-  max-width: @layout__max-width;
-  padding-left: @layout-indent__width;
-  padding-right: @layout-indent__width;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
+    max-width: @layout__max-width;
+    padding-left: @layout-indent__width;
+    padding-right: @layout-indent__width;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.lib-icon-Awesome(
+    @_icon-font-content,
+    @_icon-font: @icon-font,
+    @_icon-font-weight: 900,
+    @_icon-font-size: @icon-font__size,
+    @_icon-font-line-height: @icon-font__line-height,
+    @_icon-font-color: @icon-font__color,
+    @_icon-font-color-hover: @icon-font__color-hover,
+    @_icon-font-color-active: @icon-font__color-active,
+    @_icon-font-margin: @icon-font__margin,
+    @_icon-font-vertical-align: @icon-font__vertical-align,
+    @_icon-font-position: @icon-font__position,
+    @_icon-font-text-hide: @icon-font__text-hide,
+    @_icon-font-display: @icon-font__display
+) {
+    .lib-icon-font(
+      @_icon-font-content : @_icon-font-content,
+      @_icon-font: @_icon-font,
+      @_icon-font-size: @_icon-font-size,
+      @_icon-font-line-height: @_icon-font-line-height,
+      @_icon-font-color: @_icon-font-color,
+      @_icon-font-color-hover: @_icon-font-color-hover,
+      @_icon-font-color-active: @_icon-font-color-active,
+      @_icon-font-margin: @_icon-font-margin,
+      @_icon-font-vertical-align: @_icon-font-vertical-align,
+      @_icon-font-position: @_icon-font-position,
+      @_icon-font-text-hide: @_icon-font-text-hide,
+      @_icon-font-display: @_icon-font-display
+  );
+
+    &:before {
+        font-weight: @_icon-font-weight;
+    }
 }

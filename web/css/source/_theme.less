@@ -16,8 +16,8 @@
 //  ---------------------------------------------
 
 //  Fonts
-@icons__font-path: '@{baseDir}fonts/Luma-Icons';
-@icons__font-name: 'luma-icons';
+@icons__font-path: "@{baseDir}fonts/Luma-Icons";
+@icons__font-name: "luma-icons";
 
 //  Color nesting
 @panel__background-color: @color-gray-light0;
@@ -120,11 +120,11 @@
 
 //  Primary button
 @button-primary__background: @color-green-22;
-@button-primary__border: 1px solid  @color-green-22;
+@button-primary__border: 1px solid @color-green-22;
 @button-primary__hover__color: @color-white;
 @button-primary__color: @color-white;
 @button-primary__hover__background: @color-green-11;
-@button-primary__hover__border: 1px solid  @color-green-11;
+@button-primary__hover__border: 1px solid @color-green-11;
 @button-primary__active__background: @color-green-11;
 @button-primary__active__border: 1px solid @color-green-11;
 @button-primary__active__color: @color-white;
@@ -150,8 +150,7 @@
 @icon-arrow-right-thin: false;
 @icon-arrow-left-thin: false;
 @icon-arrow-down-thin: false;
-@icon-wishlist-empty: '\e601';
-
+@icon-wishlist-empty: "\e601";
 //
 //  Messages
 //  ---------------------------------------------
@@ -168,15 +167,15 @@
 //  Loaders
 //  ---------------------------------------------
 
-@loader-overlay__background-color: rgba(255, 255, 255, .7);
+@loader-overlay__background-color: rgba(255, 255, 255, 0.7);
 
 //
 //  Forms
 //  ---------------------------------------------
 
-
 //  Select
-@select__background: @form-element-input__background url('../images/select-bg.svg') no-repeat 100% 45%;
+@select__background: @form-element-input__background
+    url("../images/select-bg.svg") no-repeat 100% 45%;
 @select__border: 1px solid @border-color__base;
 @select__height: 32px;
 @select__padding: 4px 25px @indent__xs @indent__s;
@@ -280,7 +279,7 @@
 
 //  Window overlay
 @overlay__background: @color-gray55;
-@overlay__opacity: .7;
+@overlay__opacity: 0.7;
 @overlay__opacity-old: 70;
 
 @gallery-thumb-border-color-active: @active__color;
