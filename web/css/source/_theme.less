@@ -16,9 +16,55 @@
 //  ---------------------------------------------
 
 //  Fonts
-@icons__font-path: '@{baseDir}fonts/Luma-Icons';
+@font-lora-bold: "Lora-Bold";
+@font-lora-regular: 'Lora', serif;
+@font-roboto-bold: "Roboto-Bold";
+@font-roboto-regular: "Roboto-Regular";
+@font-market-regular: "market-regular";
+@font-roboto-medium: "Roboto-Medium";
+@font-opensans-bold: "OpenSans-Bold";
+@font-helvetica: "Helvetica";
+@font-sunvalley: "Sun-Valley";
+@font-marketweb: 'Market Web';
+
+@font-weight-700: 700;
+@font-weight-400: 400;
+@font-size32: 32px;
+@font-size24: 24px;
+@font-size18: 18px;
+@font-size15: 15px;
+@font-size13: 13px;
+@size-20px: 20px;
+@size-30px: 30px;
+@size-1px: 1px;
+@size-2px: 2px;
+@color-white: #fff;
+@color-green-default: #22b725;
+@color-green-standard: #11ab15;
+@color-green-message: #68c524;
+@color-red-validate: #ed1313;
+@color-f8: #f8f8f8;
+@color-a9: #a9a9a9;
+@color-333: #333;
+@color-777: #777;
+@color-a7: #a7a7a7;
+@color-f9: #f9f9f9;
+@color-2d: #2d2d2d;
+@color-d1: #d1d1d1;
+@color-ddd: #ddd;
+@color-3b: #3b3b3e;
+@size-200: 200px;
 @icons__font-name: 'luma-icons';
 
+@color-grayf1: #f1f1f1;
+@color-grayb: #bbbbbb;
+@color-red13: #d40000;
+@color-ff: #fffefe;
+@color-green-22: #22b725;
+@color-green-11: #11ab15;
+
+@color-dark3b: #3b3b3e;
+@color-dark22: #222223;
 //  Color nesting
 @panel__background-color: @color-gray-light0;
 @border-color__base: @color-gray80;
@@ -58,13 +104,14 @@
 //  Navigation
 //  ---------------------------------------------
 
-@navigation__background: @color-gray94;
+@navigation__background: @color-white;
 @navigation-level0-item__active__color: @primary__color;
 
 @submenu-item__active__color: @navigation-level0-item__active__color;
 
 //  Desktop navigation
-@navigation-desktop-level0-item__line-height: 47px;
+@navigation-desktop__font-size: 12px;
+@navigation-desktop-level0-item__line-height: 14px;
 @submenu-desktop__font-weight: @font-weight__regular;
 @submenu-desktop-item__active__color: @navigation-level0-item__active__color;
 
@@ -118,11 +165,23 @@
 @button__active__background: @color-gray-darken1;
 
 //  Primary button
+@button-primary__background: @color-green-22;
+@button-primary__border: 1px solid @color-green-22;
 @button-primary__hover__color: @color-white;
-@button-primary__active__background: @link__hover__color;
-@button-primary__active__border: 1px solid @link__hover__color;
+@button-primary__color: @color-white;
+@button-primary__hover__background: @color-green-11;
+@button-primary__hover__border: 1px solid @color-green-11;
+@button-primary__active__background: @color-green-11;
+@button-primary__active__border: 1px solid @color-green-11;
 @button-primary__active__color: @color-white;
 
+// Standard button
+@button-standard__background: @color-white;
+@button-standard__border: 2px solid @color-dark3b;
+@button-standard__hover__color: @color-white;
+@button-standard__hover__background: @color-dark3b;
+@button-standard__active__background: @color-dark3b;
+@button-standard__font-weight: bold;
 //  Button with icon
 @button-icon__line-height: @icon-font__line-height;
 
@@ -295,48 +354,6 @@
 
 @copyright__background-color: @color-gray-middle4;
 
-// set variables
-@font-lora-bold: "Lora-Bold";
-@font-lora-regular: 'Lora', serif;
-@font-roboto-bold: "Roboto-Bold";
-@font-roboto-regular: "Roboto-Regular";
-@font-market-regular: "market-regular";
-@font-roboto-medium: "Roboto-Medium";
-@font-opensans-bold: "OpenSans-Bold";
-@font-helvetica: "Helvetica";
-@font-sunvalley: "Sun-Valley";
-@font-marketweb:'Market Web';
-
-@font-weight-700: 700;
-@font-weight-400: 400;
-@font-size32: 32px;
-@font-size24: 24px;
-@font-size18: 18px;
-@font-size15: 15px;
-@font-size13: 13px;
-@size-20px: 20px;
-@size-30px: 30px;
-@size-1px: 1px;
-@size-2px: 2px;
-@color-white: #fff;
-@color-green-default: #22b725;
-@color-green-standard: #11ab15;
-@color-green-message: #68c524;
-@color-red-validate: #ed1313;
-@color-f8: #f8f8f8;
-@color-a9: #a9a9a9;
-@color-333: #333;
-@color-777: #777;
-@color-a7: #a7a7a7;
-@color-f9: #f9f9f9;
-@color-2d:  #2d2d2d;
-@color-d1: #d1d1d1;
-@color-ddd: #ddd;
-@color-3b:#3b3b3e;
-@size-200: 200px;
-
-& when (@media-common =true) {
-
     //style default
     body {
         .lib-css(font-family, @font-roboto-regular);
@@ -344,15 +361,18 @@
         .lib-css(line-height, @size-20px);
         .lib-css(color, @color-333);
     }
+
     p {
         .lib-css(font-size, @font-size15);
     }
+
     h5 {
         .lib-css(font-family, @font-helvetica);
         .lib-css(font-size, @size-30px);
         .lib-css(color, @color-a9);
         .lib-css(font-weight, @font-weight-400);
     }
+
     h1 {
         .lib-css(font-family, @font-lora-regular);
         .lib-css(font-size, @font-size32);
@@ -397,7 +417,7 @@
             @_button-border: @size-1px solid @color-green-default,
             @_button-font-size: @font-size13,
             @_button-background-hover: @color-green-standard,
-            );
+        );
 
         &.active {
             background: @color-green-standard;
@@ -451,6 +471,7 @@
             }
         }
     }
+
     .banner-burning-one {
         .lib-css(width, 330px);
         .lib-css(height, 280px);
@@ -460,16 +481,16 @@
             .lib-css(width, 100%);
         }
     }
-   
+
     .button-banner {
-        .lib-button(@_button-background:  @color-333,
-        @_button-color: @color-white,
-        @_button-font-family: @font-roboto-bold,
-        @_button-background-hover: @color-3b,
-        @_button-color-hover: @color-white,
-        @_button-background-active: @color-3b,
-        @_button-color-active: @color-white,
-        @_button-border: @size-2px solid @color-white);
+        .lib-button(@_button-background: @color-333,
+            @_button-color: @color-white,
+            @_button-font-family: @font-roboto-bold,
+            @_button-background-hover: @color-3b,
+            @_button-color-hover: @color-white,
+            @_button-background-active: @color-3b,
+            @_button-color-active: @color-white,
+            @_button-border: @size-2px solid @color-white);
         .lib-css(width, 250px);
         .lib-css(height, 50px);
         .lib-css(padding, 7px 0);
@@ -495,7 +516,7 @@
         &:not([disabled]):focus {
             .lib-css(box-shadow, none);
         }
-        
+
         //input adjust
         &.input-adjust {
             .lib-css(margin, 0px -5px);
@@ -670,4 +691,4 @@
     .example-dropdown-1 {
         .lib-dropdown();
     }
-}
+
