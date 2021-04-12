@@ -21,16 +21,16 @@
                 <height>165</height>
             </image>
             <image id="category_page_grid" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>280</width>
+                <height>209</height>
             </image>
             <image id="category_page_grid-1" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>280</width>
+                <height>209</height>
             </image>
             <image id="category_page_list" type="small_image">
-                <width>240</width>
-                <height>300</height>
+                <width>280</width>
+                <height>209</height>
             </image>
             <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
@@ -61,7 +61,7 @@
                 <height>300</height>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
-                <width>270</width>
+                <width>300</width>
                 <height>340</height>
             </image>
             <image id="new_products_images_only_widget" type="small_image">
@@ -87,7 +87,7 @@
             </image>
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">
-                <width>240</width>
+                <width>300</width>
                 <height>300</height>
             </image>
             <image id="product_swatch_image_small" type="thumbnail">
@@ -119,7 +119,7 @@
                 <height>75</height>
             </image>
             <image id="recently_compared_products_grid_content_widget" type="small_image">
-                <width>240</width>
+                <width>300</width>
                 <height>300</height>
             </image>
             <image id="recently_compared_products_images_names_widget" type="thumbnail">
@@ -135,7 +135,7 @@
                 <height>340</height>
             </image>
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
-                <width>240</width>
+                <width>300</width>
                 <height>300</height>
             </image>
             <image id="recently_viewed_products_images_names_widget" type="small_image">

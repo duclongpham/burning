@@ -1,0 +1,17 @@
+<div class="footer-container">
+    <?= $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-showroom-left')
+        ->toHtml();
+    ?>
+    <?= $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-showroom-center')
+        ->toHtml();
+    ?>
+    <?= $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('footer-showroom-right')
+        ->toHtml();
+    ?>
+</div>

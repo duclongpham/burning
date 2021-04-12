@@ -1,0 +1,620 @@
+.homepage-foursixty {
+    text-align: center;
+    margin-top: -16px;
+    position: relative;
+
+    .item-fs {
+        height: 233px;
+    }
+
+    .list-fs {
+        padding: 0;
+        list-style-type: none;
+    }
+    &:after {
+        content: '';
+        height: 1px;
+        background: #ddd;
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+    .title {
+        position: relative;
+        margin-bottom: 3px;
+        letter-spacing: 2.3px;
+        width: 600px;
+        margin: auto;
+        span {
+            padding: 0 25px;
+            background: #fff;
+        }
+    }
+
+    h3 {
+        line-height: 24px;
+        color: #222222;
+        font-weight: 400;
+        background: #fff;
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 19px;
+        margin-bottom: 24px;
+    }
+}
+
+.slick-prev,
+.slick-next {
+    border-radius: 50%;
+    border: 1px solid @color-gray52;
+    width: 42px;
+    height: 42px;
+    z-index: 1;
+    background-color: @color-white;
+
+    &::before {
+        color: @color-black;
+        font-size: 34px;
+        position: relative;
+        top: -2px;
+        left: 0;
+    }
+}
+
+.slick-prev {
+    left: 0px;
+    top: 115px;
+
+    &::before {
+        content: "\2039";
+    }
+}
+
+.slick-next {
+    right: 0px;
+    top: 115px;
+
+    &::before {
+        content: "\203A";
+    }
+}
+
+
+
+//desktop
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__l) {
+    .home-three-tiles .home-md-4 .text a {
+        margin-top: -30px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__xl) {
+    .home-three-tiles .home-md-4 .text a {
+        margin-top: -40px;
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .block-compare .block-title, .block-reorder .block-title, .widget .block-title, .block-wishlist .block-title {
+        margin: 40px 0 -34px;
+    }
+    .main-banner {
+        margin-top: -8px;
+    }
+    .home-md-4.home-sm-12 {
+        padding-bottom: 40px;
+    }
+    .home-md-6.home-sm-6.position-relative.hide-on-mobile {
+        margin-top: -42px;
+    }
+    .page-wrapper .page-main {
+        max-width: 1280px;
+        padding: 0 20px;
+    }
+    .title-fs {
+        padding: 0 20px;
+    }
+    .homepage-foursixty h3 {
+        font-size: 32px;
+        margin: auto;
+    }
+
+    .home-three-tiles .home-md-4 .text a {
+        margin-top: 21px;
+    }
+
+    .home-links {
+        margin: 20px 0;
+    }
+
+    .hide-on-desktop {
+        display: none;
+    }
+
+    h3.title.hide-on-desktop {
+        display: none;
+    }
+
+    .home-row a:after {
+        line-height: inherit;
+        color: inherit;
+        content: '\e608';
+        font-family: 'luma-icons';
+        vertical-align: middle;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        right: 19px;
+        top: 9px;
+    }
+
+    .main-banner-content .display-table-cell p span {
+        letter-spacing: 1.2px;
+        margin: 36px 0 0px 18px;
+    }
+    .main-banner-content .display-table-cell p {
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 2px;
+    }
+    .main-banner-content .display-table-cell {
+        p span {
+            color: #ffffff;
+            font-size: 32px;
+            line-height: 34px;
+            font-size: 200px;
+
+        }
+
+        a {
+            text-transform: uppercase;
+            margin-top: 152px;
+        }
+
+        h2 {
+            font-size: 200px;
+            line-height: 175px;
+            color: #ffffff;
+            .lib-css(font-family, @font-marketweb);
+            letter-spacing: 1.5px;
+            margin-top: -48px;
+        }
+    }
+
+    .home-links ul li:last-child a {
+        margin-left: -6px;
+    }
+
+    .home-links ul li a {
+        color: #fff;
+        letter-spacing: 0.7px;
+        position: relative;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600;
+        margin-left: -55px;
+    }
+
+    .home-links ul li:first-child a {
+        margin-left: -92px;
+    }
+
+    .home-md-4 {
+        width: 33.333333333%;
+        float: left;
+    }
+
+    .home-three-tiles .home-md-4 .text {
+        padding-bottom: 33px;
+    }
+
+    .img-banner-bottom {
+        height: 440px;
+    }
+
+    .widget .block-title strong,
+    .block-wishlist .block-title strong {
+        font-size: 32px;
+    }
+
+    .product-item .price-box {
+        margin: 24px 0 16px 0;
+    }
+
+    .block-wishlist .block-title {
+        margin: 44px 0 0 0;
+    }
+}
+
+//reponsive mobi
+@media only screen and (max-width: 400px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .home-sm-12 {
+        width: 100%;
+        float: left;
+    }
+
+    .home-links {
+        margin-top: 20px;
+        margin-bottom: 14px;
+    }
+
+    .page-wrapper .page-main {
+        max-width: 1280px;
+        padding: 0 10px;
+    }
+
+    .main-banner-content .display-table-cell {
+
+        a {
+            text-transform: uppercase;
+            margin-top: 72px;
+            width: 58%;
+            padding-right: 15px;
+            height: 38px;
+        }
+
+        .button-banner {
+            text-align: center;
+            line-height: 20px;
+            font-size: 13px;
+        }
+
+        h2 {
+            font-size: 60px;
+            color: #ffffff;
+            .lib-css(font-family, @font-marketweb);
+            letter-spacing: -0.8px;
+            margin-right: 20px;
+            word-spacing: 10px;
+            margin-bottom: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 34%;
+            width: 100%;
+            left: 48%;
+            margin-top: -0.5rem;
+        }
+    }
+
+    .main-banner-content .display-table-cell p span {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 0px 0 0px 18px;
+        letter-spacing: 1.2px;
+        margin-top: -34px;
+        margin-top: 27px;
+    }
+
+    .home-three-tiles {
+        margin-top: -76px;
+
+        .img-banner-mobi {
+            height: 298px;
+            padding: 0 10px 13px 10px;
+        }
+    }
+
+    .home-three-tiles .home-row .absolute-wrapper-for-banner .display-table-cell h3 {
+        &.bot {
+            left: 17.5%;
+            top: 25%;
+        }
+
+        &.top {
+            top: 24%;
+        }
+
+        &.title-mobi {
+            font-size: 24px;
+            position: absolute;
+            line-height: 42px;
+            color: #ffffff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    a.button-banner.btn-mobi {
+        width: 120px;
+        color: #fff;
+        top: 53%;
+        height: 40px;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 8px 0px;
+        padding-right: 14px;
+        line-height: 20px;
+    }
+
+    .home-row a:after {
+        right: 14px;
+        line-height: inherit;
+        color: inherit;
+        content: '\e608';
+        font-family: 'luma-icons';
+        vertical-align: middle;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        top: 9px;
+    }
+
+    .home-links {
+        margin: -3px 0 8.5px 0;
+    }
+
+    .home-links ul li:last-child a {
+        margin-left: -58px;
+    }
+
+    .home-links ul li a {
+        color: #fff;
+        letter-spacing: 0.7px;
+        position: relative;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: -55px;
+    }
+
+    .home-three-tiles .home-md-4 .text {
+        padding-bottom: 17.5px;
+    }
+
+    .img-banner-bottom {
+        height: 238px;
+    }
+
+    .widget .block-title strong,
+    .block-wishlist .block-title strong {
+        font-size: 22px;
+    }
+
+    .product-item .price-box {
+        margin: 10px 0 16px 0;
+    }
+
+    .block-wishlist .block-title {
+        margin: 0;
+    }
+
+    .homepage-products.slick-list.slick-slide {
+        padding-right: 2px;
+    }
+
+    .block.widget .products-grid .product-item:nth-child(2n + 1) {
+        margin-left: 0;
+        height: 340px;
+    }
+
+    .block,
+    .customer-review .product-details,
+    .block-banners,
+    .block-banners-inline {
+        margin-bottom: -4px;
+    }
+}
+
+// 768 <<
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .homepage-foursixty:after {
+        content: '';
+        height: 1px;
+        background: #ddd;
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .homepage-foursixty h3 {
+        font-size: 22px;
+        letter-spacing: 1.5px;
+        background: #fff;
+        margin: auto;
+        width: 297px;
+    }
+    .title-fs {
+        padding: 0 20px;
+    }
+    h3.title.hide-on-mobile {
+        display: none;
+    }
+
+    .home-sm-12 {
+        width: 100%;
+        float: left;
+    }
+
+    .home-links {
+        margin-top: 20px;
+        margin-bottom: 14px;
+    }
+
+    .page-wrapper .page-main {
+        max-width: 1280px;
+        padding: 0 10px;
+    }
+
+    .main-banner-content .display-table-cell {
+
+        a {
+            text-transform: uppercase;
+            margin-top: 72px;
+            width: 58%;
+            padding-right: 15px;
+            height: 38px;
+        }
+
+        .button-banner {
+            text-align: center;
+            line-height: 20px;
+            font-size: 13px;
+            width: 242px;
+        }
+
+        h2 {
+            font-size: 60px;
+            color: #ffffff;
+            .lib-css(font-family, @font-marketweb);
+            letter-spacing: -0.8px;
+            margin-right: 20px;
+            word-spacing: 10px;
+            margin-bottom: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 34%;
+            width: 100%;
+            left: 48%;
+            margin-top: -0.5rem;
+        }
+    }
+
+    .main-banner-content .display-table-cell p span {
+        font-size: 20px;
+        color: #ffffff;
+        margin: 0px 0 0px 18px;
+        letter-spacing: 1.2px;
+        margin-top: -34px;
+        margin-top: 27px;
+    }
+
+    .home-three-tiles {
+        margin-top: -76px;
+
+        .img-banner-mobi {
+            height: 298px;
+            padding: 0 10px 13px 10px;
+        }
+    }
+
+    .home-three-tiles .home-row .absolute-wrapper-for-banner .display-table-cell h3 {
+        &.bot {
+            left: 17.5%;
+            top: 25%;
+        }
+
+        &.top {
+            top: 24%;
+        }
+
+        &.title-mobi {
+            font-size: 24px;
+            position: absolute;
+            line-height: 42px;
+            color: #ffffff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    a.button-banner.btn-mobi {
+        width: 120px;
+        color: #fff;
+        top: 53%;
+        height: 40px;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 8px 0px;
+        padding-right: 14px;
+        line-height: 20px;
+    }
+
+    .home-row a:after {
+        right: 14px;
+        line-height: inherit;
+        color: inherit;
+        content: '\e608';
+        font-family: 'luma-icons';
+        vertical-align: middle;
+        display: inline-block;
+        font-weight: normal;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        top: 9px;
+    }
+
+    .home-links {
+        margin: -3px 0 8.5px 0;
+    }
+
+    .home-links ul li:last-child a {
+        margin-left: -58px;
+    }
+
+    .home-links ul li a {
+        color: #fff;
+        letter-spacing: 0.7px;
+        position: relative;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: -55px;
+    }
+
+    .home-three-tiles .home-md-4 .text {
+        padding-bottom: 17.5px;
+    }
+
+    .img-banner-bottom {
+        height: 238px;
+    }
+
+    .widget .block-title strong,
+    .block-wishlist .block-title strong {
+        font-size: 22px;
+    }
+
+    .product-item .price-box {
+        margin: 20px 0 16px 0;
+    }
+
+    .block-wishlist .block-title {
+        margin: 0;
+    }
+
+    .homepage-products.slick-list.slick-slide {
+        padding-right: 2px;
+    }
+
+    .block.widget .products-grid .product-item:nth-child(2n + 1) {
+        margin-left: 0;
+        height: 420px;
+    }
+
+    .block,
+    .customer-review .product-details,
+    .block-banners,
+    .block-banners-inline {
+        margin-bottom: 26px;
+    }
+
+    .product-item-info .product-item-details {
+        padding-right: 10px;
+    }
+}
