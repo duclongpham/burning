@@ -43,6 +43,21 @@
     }
 }
 
+.media-width(@extremum, @break)
+    when
+    (@extremum = "max")
+    and
+    (@break = @screen__l) {
+        .nav-sections-item-content {
+            > .navigation {
+                ul {
+                    .lib-vendor-prefix-flex-wrap();
+                }
+            }
+        }
+    }
+
+
 //
 //  Mobile
 //  _____________________________________________

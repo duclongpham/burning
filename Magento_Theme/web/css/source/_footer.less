@@ -115,6 +115,12 @@
                     span {
                         font-size: 12px;
                     }
+                    a {
+                        .lib-link(
+                            @_link-color: @color-gray20,
+                            @_link-color-hover: @color-gray34
+                        );
+                    }
                 }
             }
         }
@@ -218,6 +224,7 @@
                         @_link-color-hover: @color-gray34,
                         @_link-color-visited: @color-gray20
                     );
+                    margin-right: 10px;
                 }
             }
         }
