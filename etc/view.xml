@@ -21,16 +21,16 @@
                 <height>165</height>
             </image>
             <image id="category_page_grid" type="small_image">
-                <width>280</width>
-                <height>209</height>
+                <width>240</width>
+                <height>300</height>
             </image>
             <image id="category_page_grid-1" type="small_image">
-                <width>280</width>
-                <height>209</height>
+                <width>240</width>
+                <height>300</height>
             </image>
             <image id="category_page_list" type="small_image">
-                <width>280</width>
-                <height>209</height>
+                <width>240</width>
+                <height>300</height>
             </image>
             <image id="customer_account_my_tags_tag_view" type="small_image">
                 <width>100</width>
@@ -57,11 +57,11 @@
                 <height>75</height>
             </image>
             <image id="new_products_content_widget_grid" type="small_image">
-                <width>300</width>
+                <width>240</width>
                 <height>300</height>
             </image>
             <image id="new_products_content_widget_list" type="small_image">
-                <width>300</width>
+                <width>270</width>
                 <height>340</height>
             </image>
             <image id="new_products_images_only_widget" type="small_image">
@@ -78,6 +78,7 @@
             </image>
             <image id="product_page_image_large" type="image"/>
             <image id="product_page_image_medium" type="image">
+<<<<<<< HEAD
                 <width>700</width>
                 <height>700</height>
             </image>
@@ -88,6 +89,18 @@
             <image id="product_swatch_image_large" type="image"/>
             <image id="product_swatch_image_medium" type="image">
                 <width>300</width>
+=======
+                <width>800</width>
+                <height>600</height>
+            </image>
+            <image id="product_page_image_small" type="thumbnail">
+                <width>130</width>
+                <height>98</height>
+            </image>
+            <image id="product_swatch_image_large" type="image"/>
+            <image id="product_swatch_image_medium" type="image">
+                <width>240</width>
+>>>>>>> origin/duc
                 <height>300</height>
             </image>
             <image id="product_swatch_image_small" type="thumbnail">
@@ -119,7 +132,11 @@
                 <height>75</height>
             </image>
             <image id="recently_compared_products_grid_content_widget" type="small_image">
+<<<<<<< HEAD
                 <width>300</width>
+=======
+                <width>240</width>
+>>>>>>> origin/duc
                 <height>300</height>
             </image>
             <image id="recently_compared_products_images_names_widget" type="thumbnail">
@@ -135,7 +152,11 @@
                 <height>340</height>
             </image>
             <image id="recently_viewed_products_grid_content_widget" type="small_image">
+<<<<<<< HEAD
                 <width>300</width>
+=======
+                <width>240</width>
+>>>>>>> origin/duc
                 <height>300</height>
             </image>
             <image id="recently_viewed_products_images_names_widget" type="small_image">
@@ -151,8 +172,13 @@
                 <height>340</height>
             </image>
             <image id="related_products_list" type="small_image">
+<<<<<<< HEAD
                 <width>152</width>
                 <height>190</height>
+=======
+                <width>280</width>
+                <height>208</height>
+>>>>>>> origin/duc
             </image>
             <image id="review_page_product_image" type="small_image">
                 <width>285</width>

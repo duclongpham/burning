@@ -18,6 +18,10 @@
 //  Fonts
 @font-lora-bold: "Lora-Bold";
 @font-lora-regular: 'Lora', serif;
+@icons__font-path: '@{baseDir}fonts/Luma-Icons';
+@icons__font-name: 'luma-icons';
+@font-lora-bold: "Lora-Bold";
+@font-lora-regular: "Lora-Regular";
 @font-roboto-bold: "Roboto-Bold";
 @font-roboto-regular: "Roboto-Regular";
 @font-market-regular: "market-regular";
@@ -65,16 +69,33 @@
 
 @color-dark3b: #3b3b3e;
 @color-dark22: #222223;
+
+
 //  Color nesting
 @panel__background-color: @color-gray-light0;
 @border-color__base: @color-gray80;
 
 //  Headings
-@h3__font-weight: @font-weight__semibold;
-@h3__margin-top: @indent__base;
+// @h3__font-weight: @font-weight__semibold;
+// @h3__margin-top: @indent__base;
+
+@h1__font-size-desktop: @font-size32;
+@h1__font-family: @font-lora-regular;
+@h2__font-size: @font-size24;
+@h2__font-family: @font-lora-regular;
+@h3__font-size: @font-size18;
+@h3__font-family: @font-lora-regular;
+@h4__font-size: @font-size15;
+@h4__font-family: @font-roboto-bold;
+@h5__font-size: @size-30px;
+@h5__font-family: @font-helvetica;
+@h5__font-weight: @font-weight__light;
+@h5__font-color: @color-gray_light;
+
 
 //  Links
-@link__color: @theme__color__primary-alt;
+@link__color: @color-333;
+@link__hover__color: @color-777;
 
 //  Focus
 @focus__color: @color-blue3;
@@ -109,19 +130,27 @@
 
 @submenu-item__active__color: @navigation-level0-item__active__color;
 
+
 //  Desktop navigation
-@navigation-desktop__font-size: 12px;
-@navigation-desktop-level0-item__line-height: 14px;
+@navigation-desktop-level0-item__line-height: 47px;
 @submenu-desktop__font-weight: @font-weight__regular;
 @submenu-desktop-item__active__color: @navigation-level0-item__active__color;
 
 //  Tabs
-@tab-control__color: @color-gray43;
+@tab-control__color: @color-a9;
 @tab-control__font-weight: @font-weight__regular;
 @tab-control__height: @indent__base*2;
 @tab-control__margin-right: -1px;
 @tab-control__padding-top: 1px;
 @tab-control__padding-right: 35px;
+
+@tab-control__font-family: @font-roboto-bold;
+@tab-control__font-size: @font-size13;
+@tab-control__font-weight: @font-weight-700;
+@tab-control__background-color: @color-f9;
+@tab-control__active__color: @color-2d;
+@tab-control__border-color: @color-gray89;
+
 
 //  Tabs content
 @tab-content__padding-top: 35px;
@@ -158,30 +187,37 @@
 @button__font-weight: @font-weight__semibold;
 
 //  Default = secondary button
-@button__background: @color-gray-darken0;
-@button__border: 1px solid @border-color__base;
-@button__hover__color: @button__color;
-@button__hover__background: darken(@button__background, 5%);
-@button__active__background: @color-gray-darken1;
+@button__background: @color-white;
+@button__border: @size-1px solid @color-black2;
+@button__hover__color: @color-white;
+@button__hover__background: @color-black2;
+@button__active__background: @color-black2;
+@button__active__color: @color-white;
+@button__color: @color-black2;
+@button__border: 1px solid @color-black2;
+@button__font-family: @font-roboto-bold;
+@button__font-size: @font-size13;
+
+@button__transform-upper: uppercase;
+@button__border-radius: 0;
+@button__shadow: none;
+
 
 //  Primary button
-@button-primary__background: @color-green-22;
-@button-primary__border: 1px solid @color-green-22;
 @button-primary__hover__color: @color-white;
-@button-primary__color: @color-white;
-@button-primary__hover__background: @color-green-11;
-@button-primary__hover__border: 1px solid @color-green-11;
-@button-primary__active__background: @color-green-11;
-@button-primary__active__border: 1px solid @color-green-11;
+@button-primary__active__background: @link__hover__color;
+@button-primary__active__border: 1px solid @link__hover__color;
 @button-primary__active__color: @color-white;
 
-// Standard button
-@button-standard__background: @color-white;
-@button-standard__border: 2px solid @color-dark3b;
-@button-standard__hover__color: @color-white;
-@button-standard__hover__background: @color-dark3b;
-@button-standard__active__background: @color-dark3b;
-@button-standard__font-weight: bold;
+@button-primary__background: @color-white;
+@button-primary__hover__background: @color-2d2d2f;
+@button-primary__active__background: @color-2d2d2f;
+@button__font-family: @font-roboto-bold;
+@button-primary__border:1px solid @color-2d2d2f;
+@button-primary__font-size: @font-size13;
+@button-primary__color: @color-2d2d2f;
+@button-primary__hover__border: 1px solid @color-2d2d2f;
+
 //  Button with icon
 @button-icon__line-height: @icon-font__line-height;
 
@@ -348,347 +384,41 @@
 //  Checkout
 @checkout-sidebar__columns: 8;
 
+// size
+
+@size-20px: 20px;
+@size-30px: 30px;
+@size-1px: 1px;
+@size-22px: 22px;
+@size-200: 200px;
+
+// font-size
+@font-size32: 32px;
+@font-size24: 24px;
+@font-size18: 18px;
+@font-size16: 16px;
+@font-size15: 15px;
+@font-size13: 13px;
+@font-size12: 12px;
+
+// font-weight
+@font-weight-700: 700;
+@font-weight-400: 400;
+
+
+// line-height
+@line-height18: 18px;
+@line-height20: 20px;
+@line-height24: 24px;
+@line-height26: 26px;
+@line-height30: 30px;
+
+
+
 //
 //  Footer
 //  ---------------------------------------------
 
 @copyright__background-color: @color-gray-middle4;
 
-    //style default
-    body {
-        .lib-css(font-family, @font-roboto-regular);
-        .lib-css(font-size, @font-size13);
-        .lib-css(line-height, @size-20px);
-        .lib-css(color, @color-333);
-    }
-
-    p {
-        .lib-css(font-size, @font-size15);
-    }
-
-    h5 {
-        .lib-css(font-family, @font-helvetica);
-        .lib-css(font-size, @size-30px);
-        .lib-css(color, @color-a9);
-        .lib-css(font-weight, @font-weight-400);
-    }
-
-    h1 {
-        .lib-css(font-family, @font-lora-regular);
-        .lib-css(font-size, @font-size32);
-    }
-
-    h2 {
-        .lib-css(font-family, @font-lora-regular);
-        .lib-css(font-size, @font-size24);
-    }
-
-    h3 {
-        .lib-css(font-family, @font-lora-regular);
-        .lib-css(font-size, @font-size18);
-    }
-
-    h4 {
-        .lib-css(font-family, @font-roboto-bold);
-        .lib-css(font-size, @font-size15);
-    }
-
-    a {
-        .lib-css(font-family, @font-roboto-regular);
-        .lib-css(color, @color-333);
-        .lib-css(cursor, pointer);
-
-        &:hover {
-            .lib-css(color, @color-777);
-        }
-    }
-
-    // button
-    button {
-        .lib-css(border-radius, 0);
-        .lib-css(max-width, @size-200);
-        .lib-css(text-transform, uppercase);
-        .lib-button(@_button-background: @color-green-default,
-            @_button-background-active: @color-green-standard,
-            @_button-font-family: @font-roboto-bold,
-            @_button-color: @color-white,
-            @_button-color-hover: @color-white,
-            @_button-color-active: @color-white,
-            @_button-border: @size-1px solid @color-green-default,
-            @_button-font-size: @font-size13,
-            @_button-background-hover: @color-green-standard,
-        );
-
-        &.active {
-            background: @color-green-standard;
-        }
-
-        &:visited {
-            background: @color-green-standard;
-            color: @color-white;
-        }
-
-        //standard button
-        &.standard-button,
-        &.action.tocart.primary {
-            .lib-button(@_button-background: @color-white,
-                @_button-color: @color-black,
-                @_button-border: @size-1px solid @color-black,
-                @_button-color-hover: @color-white,
-                @_button-background-hover: @color-black,
-                @_button-font-family: @font-roboto-bold,
-                @_button-color-active: @color-white,
-                @_button-background-active: @color-black);
-        }
-
-        //standard balck button
-        &.standard-button-black {
-            .standard-button;
-            .lib-button(@_button-background: @color-black,
-                @_button-color: @color-white,
-                @_button-background-hover: @color-white,
-                @_button-color-hover: @color-black,
-                @_button-border: @size-1px solid @color-white)
-        }
-
-        //adjustable button
-        &.button-adjust {
-            .lib-button(@_button-background: @color-white,
-                @_button-color: @color-a9,
-                @_button-color-hover: @color-a9,
-                @_button-background-hover: @color-f8,
-                @_button-font-family: @font-roboto-bold,
-                @_button-color-active: @color-a9,
-                @_button-background-active: @color-f8);
-
-            &.active {
-                background: @color-f8;
-            }
-
-            &:visited {
-                background: @color-f8;
-                color: @color-a9;
-            }
-        }
-    }
-
-    .banner-burning-one {
-        .lib-css(width, 330px);
-        .lib-css(height, 280px);
-
-        .banner-img {
-            .lib-css(position, relative);
-            .lib-css(width, 100%);
-        }
-    }
-
-    .button-banner {
-        .lib-button(@_button-background: @color-333,
-            @_button-color: @color-white,
-            @_button-font-family: @font-roboto-bold,
-            @_button-background-hover: @color-3b,
-            @_button-color-hover: @color-white,
-            @_button-background-active: @color-3b,
-            @_button-color-active: @color-white,
-            @_button-border: @size-2px solid @color-white);
-        .lib-css(width, 250px);
-        .lib-css(height, 50px);
-        .lib-css(padding, 7px 0);
-        .lib-css(position, absolute);
-        .lib-css(transform, translate(-50%, -50%));
-        .lib-css(top, 50%);
-        .lib-css(left, 50%);
-    }
-
-    // input field
-    input,
-    select,
-    textarea {
-        .lib-css(max-width, @size-200);
-        .lib-form-element-color(@_background: @color-white,
-            @_border-color: @color-ddd,
-            @_color: @color-black,
-            @_focus-color: @color-black,
-            @_focus-border-color: @color-ddd);
-    }
-
-    input {
-        &:not([disabled]):focus {
-            .lib-css(box-shadow, none);
-        }
-
-        //input adjust
-        &.input-adjust {
-            .lib-css(margin, 0px -5px);
-            .lib-css(padding-bottom, 3px);
-            .lib-css(max-width, 40px);
-            .lib-css(max-height, 40px);
-            .lib-css(text-align, center);
-            .lib-css(color, @color-333);
-        }
-
-        // input checkbox
-        &[type='checkbox'] {
-            .lib-css(visibility, hidden);
-
-            &:checked+label:before {
-                .lib-css(background, @color-white);
-                .lib-css(color, @color-black);
-                .lib-css(content, "");
-                .lib-css(text-align, center);
-                .lib-css(font-size, @size-20px);
-            }
-
-            &:checked+label:after {
-                .lib-css(content, "");
-                .lib-css(width, 5px);
-                .lib-css(height, 8px);
-                .lib-css(border-width, 0 2px 2px 0);
-                .lib-css(border-style, solid);
-                .lib-css(border-color, @color-black);
-                .lib-css(transform, rotate(45deg));
-                .lib-css(position, absolute);
-                .lib-css(left, 0);
-                .lib-css(margin, 4px 4px 4px 8px);
-            }
-
-            &+label:before {
-                .lib-css(border, @size-1px solid @color-ddd);
-                .lib-css(content, "");
-                .lib-css(display, inline-block);
-                .lib-css(margin, 0 10px -6px 0);
-                .lib-css(padding, 0);
-                .lib-css(vertical-align, top);
-                .lib-css(width, @size-20px);
-                .lib-css(height, @size-20px);
-            }
-        }
-
-        //input radio
-        &[type="radio"] {
-            .lib-css(visibility, hidden);
-
-            &:checked+label:after {
-                .lib-css(background, @color-333);
-                .lib-css(color, @color-white);
-                .lib-css(content, "");
-                .lib-css(text-align, center);
-                .lib-css(width, 8px);
-                .lib-css(height, 8px);
-                .lib-css(position, absolute);
-                .lib-css(left, 0);
-                .lib-css(margin, 7px);
-                .lib-css(border-radius, 50%);
-            }
-
-            &+label:before {
-                .lib-css(border-radius, 50%);
-                .lib-css(vertical-align, baseline);
-                .lib-css(border, @size-1px solid @color-ddd);
-                .lib-css(content, "");
-                .lib-css(display, inline-block);
-                .lib-css(margin, 0 10px -6px 0);
-                .lib-css(padding, 0);
-                .lib-css(vertical-align, top);
-                .lib-css(width, @size-20px);
-                .lib-css(height, @size-20px);
-            }
-        }
-    }
-
-    label {
-        .lib-css(cursor, pointer);
-        .lib-css(position, relative);
-    }
-
-    //input text, select
-    input[type=text],
-    select {
-        .lib-css(box-sizing, border-box);
-        .lib-css(font-size, @font-size13);
-        .lib-css(line-height, @size-30px);
-        .lib-css(color, @color-333);
-        .lib-css(font-family, @font-roboto-regular);
-        .lib-css(text-align, left);
-        .lib-css(padding, 0 @font-size13);
-        .lib-css(max-width, 100%);
-        &:not([disabled]):focus,
-        &:focus {
-            .lib-css(box-shadow, none);
-        }
-    }
-
-    input.mage-error,
-    select.mage-error,
-    textarea.mage-error {
-        .lib-css(border-color, @color-red-validate);
-    }
-
-    div.mage-error {
-        .lib-css(color, @color-red9);
-    }
-
-    // alert
-    .message-success {
-        .lib-message(success);
-        .lib-css(background, @color-white);
-        .lib-css(border, solid @size-1px @color-green-message );
-        .lib-css(text-align, center);
-        .lib-css(color, @color-green-message);
-    }
-
-    .message-error {
-        .lib-message(error);
-        .lib-css(background, @color-white);
-        .lib-css(border, solid @size-1px @color-red-validate );
-        .lib-css(text-align, center);
-    }
-
-    // cms block
-    .row {
-        .lib-css(margin, 0 -10px);
-        .lib-css(display, flex);
-
-        .col {
-            .lib-css(margin, 10px);
-            .lib-css(position, relative);
-
-            .col-content {
-                .lib-css(text-align, center);
-                .lib-css(position, absolute);
-                .lib-css(top, 50%);
-                .lib-css(left, 50%);
-                .lib-css(width, 100%);
-                .lib-css(transform, translate(-50%, -50%));
-                .lib-css(text-transform, uppercase);
-
-                a {
-                    .lib-css(font-family, @font-lora-bold);
-                }
-            }
-        }
-
-    }
-
-    //navigation tab
-    .navigation-tab,
-    .product.data.items {
-        .lib-data-tabs(@_tab-control-font-family: @font-roboto-bold,
-            @_tab-control-font-size: @font-size13,
-            @_tab-control-font-weight: @font-weight-700,
-            @_tab-control-line-height: @size-20px,
-            @_tab-control-background-color: @color-f9,
-            @_tab-control-color-active: @color-2d,
-        );
-
-        &.navigation-tab>.item.content,
-        &.product.data.items>.item.content {
-            .lib-css(border, @size-1px solid @color-d1);
-        }
-    }
-
-    // dropdown
-    .example-dropdown-1 {
-        .lib-dropdown();
-    }
 
