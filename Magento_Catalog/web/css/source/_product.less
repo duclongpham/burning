@@ -5,14 +5,14 @@
 
 	.breadcrumbs .item:not(:last-child):after {
 		content: '/';
-		font-size: 16px;
+		font-size: @font-size16;
 	    margin-left: 7px;
 	}
 
 	.breadcrumbs a {
 	    color: @color-333;
 	    text-decoration: none;
-	    font-size: 12px;
+	    font-size: @font-size12;
 	    font-weight: @font-weight-400;
 	    font-family: @font-roboto-regular;
 	}
@@ -39,7 +39,7 @@
                 color: @color-white;
                 display: flex;
                 width: 100%;
-                font-size: 15px;
+                font-size: @font-size15;
                 letter-spacing: 1px;
                 justify-content: center;
                 line-height: 42px;
@@ -55,17 +55,26 @@
 			width: 33.7%;
 			border: 1px solid @color-ddd;
 
+			.page-title-wrapper {
+				margin-top: 17px;
+			}
+
 			.page-title {
-				.lib-css(font-size, @size-22px);
-				.lib-css(color, @color-222);
-				.lib-css(letter-spacing, -0.6px);
-				.lib-css(line-height, @line-height26);
-				margin: 25px auto 0;
+				margin: 17px auto 0;
 				width: 86%;
+
+				span {
+					.lib-css(font-size, @size-22px);
+					.lib-css(color, @color-222);
+					.lib-css(letter-spacing, -0.6px);
+					.lib-css(line-height, @line-height26);
+					.lib-css(font-family, @font-lora-regular);
+					.lib-css(font-weight, @font-weight-400);
+				}
 			}
 
 			.product-info-price {
-				margin: 14px auto 0;
+				margin: 14px auto -1px;
 			    padding-bottom: 4px;
 			    width: 86%;
 			}
@@ -171,7 +180,7 @@
 						font-family: @font-roboto-regular;
 						font-weight: @font-weight-400;
 						letter-spacing: 0.2px;
-						font-size: 18px;
+						font-size: @font-size18;
 					    margin-bottom: 11px;
 					}
 					p {
@@ -199,8 +208,8 @@
 				    .blog-product-right h3{
 				    	color: @color-222;
 				    	margin-top: 33px;
-					    font-size: 20px;
-					    line-height: 36px;
+					    font-size: @size-20px;
+					    line-height: @line-height36;
 					    padding-left: 18px;
 				        margin-bottom: 5px;
 				    }
@@ -262,8 +271,11 @@
 		.product-info-main {
 
 			.page-title {
-				.lib-css(font-size, @font-size18);
 				margin: 15px auto 0;
+
+				span {
+					.lib-css(font-size, @font-size18);
+				}
 			}
 
 			.product-info-price {
@@ -344,8 +356,11 @@
 		.product-info-main {
 
 			.page-title {
-				.lib-css(font-size, @size-22px);
-				margin: 25px auto 0;
+				margin: 17px auto 0;
+
+				span {
+					.lib-css(font-size, @size-22px);
+				}
 			}
 
 			.product-info-price {

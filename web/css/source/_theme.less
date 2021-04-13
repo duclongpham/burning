@@ -16,8 +16,6 @@
 //  ---------------------------------------------
 
 //  Fonts
-@font-lora-bold: "Lora-Bold";
-@font-lora-regular: 'Lora', serif;
 @icons__font-path: '@{baseDir}fonts/Luma-Icons';
 @icons__font-name: 'luma-icons';
 @font-lora-bold: "Lora-Bold";
@@ -30,55 +28,13 @@
 @font-helvetica: "Helvetica";
 @font-sunvalley: "Sun-Valley";
 @font-marketweb: 'Market Web';
-
-@font-weight-700: 700;
-@font-weight-400: 400;
-@font-size32: 32px;
-@font-size24: 24px;
-@font-size18: 18px;
-@font-size15: 15px;
-@font-size13: 13px;
-@size-20px: 20px;
-@size-30px: 30px;
-@size-1px: 1px;
-@size-2px: 2px;
-@color-white: #fff;
-@color-green-default: #22b725;
-@color-green-standard: #11ab15;
-@color-green-message: #68c524;
-@color-red-validate: #ed1313;
-@color-f8: #f8f8f8;
-@color-a9: #a9a9a9;
-@color-333: #333;
-@color-777: #777;
-@color-a7: #a7a7a7;
-@color-f9: #f9f9f9;
-@color-2d: #2d2d2d;
-@color-d1: #d1d1d1;
-@color-ddd: #ddd;
-@color-3b: #3b3b3e;
-@size-200: 200px;
-@icons__font-name: 'luma-icons';
-
-@color-grayf1: #f1f1f1;
-@color-grayb: #bbbbbb;
-@color-red13: #d40000;
-@color-ff: #fffefe;
-@color-green-22: #22b725;
-@color-green-11: #11ab15;
-
-@color-dark3b: #3b3b3e;
-@color-dark22: #222223;
-
-
+@color-gray35: #ddd;
+@color-gray52: #ddd;
 //  Color nesting
 @panel__background-color: @color-gray-light0;
 @border-color__base: @color-gray80;
 
 //  Headings
-// @h3__font-weight: @font-weight__semibold;
-// @h3__margin-top: @indent__base;
-
 @h1__font-size-desktop: @font-size32;
 @h1__font-family: @font-lora-regular;
 @h2__font-size: @font-size24;
@@ -188,13 +144,13 @@
 
 //  Default = secondary button
 @button__background: @color-white;
-@button__border: @size-1px solid @color-black2;
+@button__border: @size-1px solid @color-2d2d2f;
 @button__hover__color: @color-white;
-@button__hover__background: @color-black2;
-@button__active__background: @color-black2;
+@button__hover__background: @color-2d2d2f;
+@button__active__background: @color-2d2d2f;
 @button__active__color: @color-white;
-@button__color: @color-black2;
-@button__border: 1px solid @color-black2;
+@button__color: @color-2d2d2f;
+@button__border: 1px solid @color-2d2d2f;
 @button__font-family: @font-roboto-bold;
 @button__font-size: @font-size13;
 
@@ -360,6 +316,7 @@
 @popup-icon-font__color-hover: darken(@popup-icon-font__color, 10%);
 @popup-icon-font__color-active: @popup-icon-font__color-hover;
 
+
 //  Window overlay
 @overlay__background: @color-gray55;
 @overlay__opacity: .7;
@@ -385,11 +342,11 @@
 @checkout-sidebar__columns: 8;
 
 // size
-
-@size-20px: 20px;
-@size-30px: 30px;
 @size-1px: 1px;
+@size-2px: 2px;
+@size-20px: 20px;
 @size-22px: 22px;
+@size-30px: 30px;
 @size-200: 200px;
 
 // font-size
@@ -400,6 +357,8 @@
 @font-size15: 15px;
 @font-size13: 13px;
 @font-size12: 12px;
+@font-size11: 11px;
+@font-size9: 9px;
 
 // font-weight
 @font-weight-700: 700;
@@ -412,13 +371,361 @@
 @line-height24: 24px;
 @line-height26: 26px;
 @line-height30: 30px;
+@line-height36: 36px;
 
 
+@color-white: #fff;
+@color-green-default: #22b725;
+@color-green-standard: #11ab15;
+@color-green-message: #68c524;
+@color-red-validate: #ed1313;
+@color-f8: #f8f8f8;
+@color-a9: #a9a9a9;
+@color-333: #333;
+@color-777: #777;
+@color-a7: #a7a7a7;
+@color-f9: #f9f9f9;
+@color-2d: #2d2d2d;
+@color-d1: #d1d1d1;
+@color-ddd: #ddd;
+@color-3b: #3b3b3e;
+@color-424242: #424242;
+@color-222: #222;
+@color-111: #111;
+@color-f20101: #f20101;
+@color-ededed: #ededed;
+@color-2d2d2f: #2d2d2f;
+@icons__font-name: 'luma-icons';
+
+@color-grayf1: #f1f1f1;
+@color-grayb: #bbbbbb;
+@color-red13: #d40000;
+@color-ff: #fffefe;
+@color-green-22: #22b725;
+@color-green-11: #11ab15;
+@color-gray35: #dddddd;
+
+@color-dark3b: #3b3b3e;
+@color-dark22: #222223;
+@color-blue4: #114a97;
 
 //
 //  Footer
 //  ---------------------------------------------
 
 @copyright__background-color: @color-gray-middle4;
+
+//style default
+// body {
+//     .lib-css(font-family, @font-roboto-regular);
+//     .lib-css(font-size, @font-size13);
+//     .lib-css(line-height, @size-20px);
+//     .lib-css(color, @color-333);
+// }
+
+// p {
+//     .lib-css(font-size, @font-size15);
+// }
+
+// h5 {
+//     .lib-css(font-family, @font-helvetica);
+//     .lib-css(font-size, @size-30px);
+//     .lib-css(color, @color-a9);
+//     .lib-css(font-weight, @font-weight-400);
+// }
+
+// h1 {
+//     .lib-css(font-family, @font-lora-regular);
+//     .lib-css(font-size, @font-size32);
+// }
+
+// h2 {
+//     .lib-css(font-family, @font-lora-regular);
+//     .lib-css(font-size, @font-size24);
+// }
+
+// h3 {
+//     .lib-css(font-family, @font-lora-regular);
+//     .lib-css(font-size, @font-size18);
+// }
+
+// h4 {
+//     .lib-css(font-family, @font-roboto-bold);
+//     .lib-css(font-size, @font-size15);
+// }
+
+// a {
+//     .lib-css(font-family, @font-roboto-regular);
+//     .lib-css(color, @color-333);
+//     .lib-css(cursor, pointer);
+
+//     &:hover {
+//         .lib-css(color, @color-777);
+//     }
+// }
+
+// // button
+// button {
+//     .lib-css(border-radius, 0);
+//     .lib-css(max-width, @size-200);
+//     .lib-css(text-transform, uppercase);
+//     .lib-button(@_button-background: @color-green-default,
+//         @_button-background-active: @color-green-standard,
+//         @_button-font-family: @font-roboto-bold,
+//         @_button-color: @color-white,
+//         @_button-color-hover: @color-white,
+//         @_button-color-active: @color-white,
+//         @_button-border: @size-1px solid @color-green-default,
+//         @_button-font-size: @font-size13,
+//         @_button-background-hover: @color-green-standard,
+//     );
+
+//     &.active {
+//         background: @color-green-standard;
+//     }
+
+//     &:visited {
+//         background: @color-green-standard;
+//         color: @color-white;
+//     }
+
+//     //standard button
+//     &.standard-button,
+//     &.action.tocart.primary {
+//         .lib-button(@_button-background: @color-white,
+//             @_button-color: @color-black,
+//             @_button-border: @size-1px solid @color-black,
+//             @_button-color-hover: @color-white,
+//             @_button-background-hover: @color-black,
+//             @_button-font-family: @font-roboto-bold,
+//             @_button-color-active: @color-white,
+//             @_button-background-active: @color-black);
+//     }
+
+//     //standard balck button
+//     &.standard-button-black {
+//         .standard-button;
+//         .lib-button(@_button-background: @color-black,
+//             @_button-color: @color-white,
+//             @_button-background-hover: @color-white,
+//             @_button-color-hover: @color-black,
+//             @_button-border: @size-1px solid @color-white)
+//     }
+
+//     //adjustable button
+//     &.button-adjust {
+//         .lib-button(@_button-background: @color-white,
+//             @_button-color: @color-a9,
+//             @_button-color-hover: @color-a9,
+//             @_button-background-hover: @color-f8,
+//             @_button-font-family: @font-roboto-bold,
+//             @_button-color-active: @color-a9,
+//             @_button-background-active: @color-f8);
+
+//         &.active {
+//             background: @color-f8;
+//         }
+
+//         &:visited {
+//             background: @color-f8;
+//             color: @color-a9;
+//         }
+//     }
+// }
+
+.banner-burning-one {
+    .lib-css(width, 330px);
+    .lib-css(height, 280px);
+
+    .banner-img {
+        .lib-css(position, relative);
+        .lib-css(width, 100%);
+    }
+}
+
+.button-banner {
+    .lib-button(@_button-background: @color-333,
+        @_button-color: @color-white,
+        @_button-font-family: @font-roboto-bold,
+        @_button-background-hover: @color-3b,
+        @_button-color-hover: @color-white,
+        @_button-background-active: @color-3b,
+        @_button-color-active: @color-white,
+        @_button-border: @size-2px solid @color-white);
+    .lib-css(width, 250px);
+    .lib-css(height, 50px);
+    .lib-css(padding, 7px 0);
+    .lib-css(position, absolute);
+    .lib-css(transform, translate(-50%, -50%));
+    .lib-css(top, 50%);
+    .lib-css(left, 50%);
+}
+
+// input field
+input,
+textarea {
+    .lib-css(max-width, @size-200);
+    .lib-form-element-color(@_background: @color-white,
+        @_border-color: @color-ddd,
+        @_color: @color-black,
+        @_focus-color: @color-black,
+        @_focus-border-color: @color-ddd);
+}
+
+input {
+    &:not([disabled]):focus {
+        .lib-css(box-shadow, none);
+    }
+
+    //input adjust
+    &.input-adjust {
+        .lib-css(margin, 0px -5px);
+        .lib-css(padding-bottom, 3px);
+        .lib-css(max-width, 40px);
+        .lib-css(max-height, 40px);
+        .lib-css(text-align, center);
+        .lib-css(color, @color-333);
+    }
+
+    // input checkbox
+    &[type='checkbox'] {
+        .lib-css(visibility, hidden);
+
+        &:checked+label:before {
+            .lib-css(background, @color-white);
+            .lib-css(color, @color-black);
+            .lib-css(content, "");
+            .lib-css(text-align, center);
+            .lib-css(font-size, @size-20px);
+        }
+
+        &:checked+label:after {
+            .lib-css(content, "");
+            .lib-css(width, 5px);
+            .lib-css(height, 8px);
+            .lib-css(border-width, 0 2px 2px 0);
+            .lib-css(border-style, solid);
+            .lib-css(border-color, @color-black);
+            .lib-css(transform, rotate(45deg));
+            .lib-css(position, absolute);
+            .lib-css(left, 0);
+            .lib-css(margin, 4px 4px 4px 8px);
+        }
+
+        &+label:before {
+            .lib-css(border, @size-1px solid @color-ddd);
+            .lib-css(content, "");
+            .lib-css(display, inline-block);
+            .lib-css(margin, 0 10px -6px 0);
+            .lib-css(padding, 0);
+            .lib-css(vertical-align, top);
+            .lib-css(width, @size-20px);
+            .lib-css(height, @size-20px);
+        }
+    }
+
+    //input radio
+    &[type="radio"] {
+        .lib-css(visibility, hidden);
+
+        &:checked+label:after {
+            .lib-css(background, @color-333);
+            .lib-css(color, @color-white);
+            .lib-css(content, "");
+            .lib-css(text-align, center);
+            .lib-css(width, 8px);
+            .lib-css(height, 8px);
+            .lib-css(position, absolute);
+            .lib-css(left, 0);
+            .lib-css(margin, 7px);
+            .lib-css(border-radius, 50%);
+        }
+
+        &+label:before {
+            .lib-css(border-radius, 50%);
+            .lib-css(vertical-align, baseline);
+            .lib-css(border, @size-1px solid @color-ddd);
+            .lib-css(content, "");
+            .lib-css(display, inline-block);
+            .lib-css(margin, 0 10px -6px 0);
+            .lib-css(padding, 0);
+            .lib-css(vertical-align, top);
+            .lib-css(width, @size-20px);
+            .lib-css(height, @size-20px);
+        }
+    }
+}
+
+label {
+    .lib-css(cursor, pointer);
+    .lib-css(position, relative);
+}
+
+//input text, select
+input[type=text]{
+    .lib-css(box-sizing, border-box);
+    .lib-css(font-size, @font-size13);
+    .lib-css(line-height, @size-30px);
+    .lib-css(color, @color-333);
+    .lib-css(font-family, @font-roboto-regular);
+    .lib-css(text-align, left);
+    .lib-css(padding, 0 @font-size13);
+
+    &:not([disabled]):focus,
+    &:focus {
+        .lib-css(box-shadow, none);
+    }
+}
+
+input.mage-error,
+textarea.mage-error {
+    .lib-css(border-color, @color-red-validate);
+}
+
+div.mage-error {
+    .lib-css(color, @color-red9);
+}
+
+// alert
+.message-success {
+    .lib-message(success);
+    .lib-css(background, @color-white);
+    .lib-css(border, solid @size-1px @color-green-message );
+    .lib-css(text-align, center);
+    .lib-css(color, @color-green-message);
+}
+
+.message-error {
+    .lib-message(error);
+    .lib-css(background, @color-white);
+    .lib-css(border, solid @size-1px @color-red-validate );
+    .lib-css(text-align, center);
+}
+
+// cms block
+.row {
+    .lib-css(margin, 0 -10px);
+    .lib-css(display, flex);
+
+    .col {
+        .lib-css(margin, 10px);
+        .lib-css(position, relative);
+
+        .col-content {
+            .lib-css(text-align, center);
+            .lib-css(position, absolute);
+            .lib-css(top, 50%);
+            .lib-css(left, 50%);
+            .lib-css(width, 100%);
+            .lib-css(transform, translate(-50%, -50%));
+            .lib-css(text-transform, uppercase);
+
+            a {
+                .lib-css(font-family, @font-lora-bold);
+            }
+        }
+    }
+
+}
 
 
