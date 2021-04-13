@@ -1,0 +1,69 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //  Using buttons mixins
+    button,
+    a.action.primary {
+        .lib-css(border-radius, 0);
+    }
+
+    body {
+        &:not(._keyfocus) {
+            button {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    a.action.primary {
+        .lib-link-as-button();
+    }
+
+    .action.primary {
+        .lib-button-primary();
+    }
+
+    .action.standard {
+        .lib-css(border-radius, 0);
+        .lib-button(
+            // @_button-background: @button-standard__background,
+            // @_button-border: @button-standard__border, 
+            // @_button-color-hover: @button-standard__hover__color, 
+            // @_button-background-hover: @button-standard__hover__background, 
+            // @_button-background-active: @button-standard__active__background,
+            // @_button-font-weight: @button-standard__font-weight,
+            
+            // @_button-border-hover: @button-standard__border,
+            // @_button-color-active: @button-standard__hover__color,
+            // @_button-border-active: @button-standard__border,
+        )
+    }
+
+    &.button-adjust {
+        .lib-button(@_button-background: @color-white,
+            @_button-color: @color-a9,
+            @_button-color-hover: @color-a9,
+            @_button-background-hover: @color-f8,
+            @_button-color-active: @color-a9,
+            @_button-background-active: @color-f8);
+
+        &.active {
+            background: @color-f8;
+        }
+
+        &:visited {
+            background: @color-f8;
+            color: @color-a9;
+        }
+    }
+}
