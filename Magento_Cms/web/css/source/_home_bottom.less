@@ -135,6 +135,10 @@
         margin-top: 12px;
     }
 
+    .homepage-foursixty button.slick-next.slick-arrow {
+        right: 11px;
+    }
+
     .homepage-products .block-compare .block-title,
     .block-reorder .block-title,
     .widget .block-title,
@@ -326,8 +330,10 @@
     }
 }
 
+@media only screen and (max-width: 768px) {}
+
 //reponsive mobi
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 450px) {
     .hide-on-mobile {
         display: none;
     }
@@ -335,7 +341,7 @@
     .home-three-tiles.home-bottom {
         margin-top: -5px;
     }
-
+    
     .homepage-products .block,
     .customer-review .product-details,
     .block-banners,
@@ -463,6 +469,7 @@
     }
 
     .home-three-tiles .home-row .absolute-wrapper-for-banner .display-table-cell h3 {
+        position: absolute;
         &.bot {
             left: 18.5%;
             top: 26%;
@@ -599,7 +606,9 @@
         width: 100%;
         z-index: -1;
     }
-
+    .homepage-products .slick-list {
+        margin-top: -85px;
+    }
     .homepage-foursixty h3 {
         font-size: 22px;
         letter-spacing: 1.5px;
@@ -676,8 +685,12 @@
         margin-top: 27px;
     }
 
+    .home-links {
+        margin: -3px 0 69.5px 0;
+    }
+
     .home-three-tiles {
-        margin-top: -76px;
+        margin-top: -56px;
 
         .img-banner-mobi {
             height: 298px;
@@ -697,18 +710,19 @@
 
         &.title-mobi {
             font-size: 24px;
-            position: absolute;
             line-height: 42px;
             color: #ffffff;
             text-align: center;
+            margin-top: 3px;
             text-transform: uppercase;
+            margin: 0 auto;
         }
     }
 
     a.button-banner.btn-mobi {
         width: 120px;
         color: #fff;
-        top: 53%;
+        top: 65%;
         height: 40px;
         text-transform: uppercase;
         font-size: 13px;
@@ -730,10 +744,6 @@
         position: absolute;
         text-align: center;
         top: 9px;
-    }
-
-    .home-links {
-        margin: -3px 0 8.5px 0;
     }
 
     .home-links ul li:last-child a {

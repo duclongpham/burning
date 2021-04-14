@@ -119,7 +119,7 @@ use Magento\Framework\App\Action\Action;
         'slick'
     ], function($) {
         jQuery(document).ready(function() {
-            jQuery(".slick-links").slick({
+            jQuery(".slick-links").not('.slick-initialized').slick({
                 dots: false,
                 infinite: true,
                 prevArrow: false,
@@ -161,7 +161,7 @@ use Magento\Framework\App\Action\Action;
         'slick'
     ], function($) {
         jQuery(document).ready(function() {
-            jQuery(".widget-product-grid").slick({
+            jQuery(".widget-product-grid").not('.slick-initialized').slick({
                 dots: false,
                 infinite: true,
                 speed: 300,
@@ -206,7 +206,7 @@ use Magento\Framework\App\Action\Action;
         'slick'
     ], function($) {
         jQuery(document).ready(function() {
-            jQuery(".list-fs").slick({
+            jQuery(".list-fs").not('.slick-initialized').slick({
                 dots: false,
                 infinite: true,
                 speed: 300,
