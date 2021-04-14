@@ -63,7 +63,8 @@
                     vertical-align: bottom;
                     text-transform: uppercase;
                     font-family: @font-roboto-bold;
-                    padding-right: 20px;
+                    padding-right: 10px;
+                    padding-left: 10px;
                     display: table-cell;
                     .level-top {
                         border: none;
@@ -89,7 +90,7 @@
         }
     }
 }
-.media-width(@extremum, @break) when (@extremum ='max') and (@break = @screen__l) {
+@media only screen and (max-width: @screen__l) and (min-width: @screen__m ){
     div.section-item-content.nav-sections-item-content {
         border-bottom: 1px solid @color-gray-middle1;
         nav.navigation {
@@ -108,7 +109,8 @@
                     vertical-align: bottom;
                     text-transform: uppercase;
                     font-family: @font-roboto-bold;
-                    padding-right: 40px;
+                    padding-right: 20px;
+                    padding-left: 0;
                     .level-top {
                         width: min-content;
                         border: none;
