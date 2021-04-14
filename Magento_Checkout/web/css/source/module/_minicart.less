@@ -129,11 +129,11 @@
             @_icon-font-size: 22px,
             @_icon-font-line-height: 28px,
             @_icon-font-color: @color-red13,
-            @_icon-font-color-hover: @minicart-icons-color-hover,
-            @_icon-font-color-active: @minicart-icons-color
+            @_icon-font-color-hover: @color-red13,
+            @_icon-font-color-active: @color-red13
         );
         float: right;
-
+        margin-left: 30px;
         .block-minicart {
             .lib-css(padding, 25px @minicart__padding-horizontal);
 
@@ -181,7 +181,7 @@
                 .text {
                     &:extend(.abs-visually-hidden all);
                     position: relative;
-                    top: 6px;
+                    top: -7px;
                     left: 0;
                     font-size: 13px;
                     color: @color-red13;
@@ -197,10 +197,10 @@
 
                     .counter-number {
                         &:before {
-                            content: "(";
+                            content: "("
                         }
                         &:after {
-                            content: ")";
+                            content: ")"
                         }
                     }
 
@@ -212,10 +212,6 @@
                     padding: 0 3px;
                     text-align: center;
                     white-space: normal;
-
-                    &.empty {
-                        display: none;
-                    }
 
                     .loader {
                         > img {
@@ -452,6 +448,35 @@
         .update-cart-item {
             float: right;
         }
+        .action.showcart {
+            &:before{
+                color: @color-2d2d2f;
+            }
+            .text {
+                display: none;
+            }
+            .counter.qty {
+                height: 0;
+                min-width: 0;
+                width: 0;
+                .counter-number {
+                    position: absolute;
+                    top: 6px;
+                    left: 17px;
+                    padding: 0px 5px;
+                    color: @color-white;
+                    background: #23ad1c;
+                    border-radius: 30px;
+                    line-height: 1.4em;
+                    &:before {
+                        display: none;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -465,7 +490,7 @@
     and
     (@break = @screen__m) {
     .minicart-wrapper {
-        margin-left: 13px;
+        margin-left: 30px;
 
         .block-minicart {
             width: 390px;

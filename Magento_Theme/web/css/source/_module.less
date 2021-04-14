@@ -135,7 +135,7 @@
         .lib-typography-letter(
             @_font-family: "Roboto-Regular",
             @_font-weight: 500,
-            @_line-height: 20px,
+            @_line-height: 36px,
             @_color: @color-white
         );
         p {
@@ -586,6 +586,7 @@
         margin-top: 4px;
         float: none;
         img {
+            margin-top: -17px;
             width: 150px;
             margin-left: auto;
             margin-right: auto;
@@ -600,11 +601,21 @@
         .mobi {
             display: inline;
         }
+        &--top__left {
+            margin-left: -5px;
+            font-size: 13px;
+            font-family: @font-roboto-regular;
+            .mobi:before {
+                font-size: 14px;
+                margin-left: 0;
+            }
+        }
         &--top__middle {
             display: none;
         }
         &--top__right {
             width: 100%;
+            margin-right: -5px;
             .mobi {
                 float: right;
             }
@@ -624,6 +635,28 @@
     .cms-page-view .page-main {
         padding-top: 0;
         position: relative;
+    }
+    .nav-toggle {
+        &:before {
+            font-size: 19px;
+            margin-left: 4px;
+        }
+        div {
+            display: block;
+            font-size: 10px;
+            margin-top: -4px;
+        }
+    }
+    .panel.header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .page-header .panel.wrapper {
+        background-color: @color-3b;
+    }
+    .header.content {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -798,7 +831,7 @@
     }
 
     .logo {
-        margin: -8px auto @indent__m 0;
+        margin: -8px auto 14px 0;
 
         img {
             max-height: inherit;
@@ -820,7 +853,6 @@
 
     .page-footer {
         margin-top: auto;
-        padding-bottom: @indent__m;
 
         .switcher {
             .options {

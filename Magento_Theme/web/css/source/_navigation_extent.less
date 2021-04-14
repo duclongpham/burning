@@ -45,6 +45,9 @@
 // }
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break = @screen__l) {
+    .nav-sections {
+        margin-bottom: 0;
+    }
     div.section-item-content.nav-sections-item-content {
         border-bottom: 1px solid @color-gray-middle1;
         nav.navigation {
@@ -129,5 +132,19 @@
 
             }
         }
+    }
+
+    .nav-toggle {
+        text-decoration: none;
+        cursor: pointer;
+        display: block;
+        font-size: 0;
+        position: absolute;
+        top: 10px;
+        z-index: 14;
+        border: 1px solid @color-a9;
+        padding: 0 8px;
+        padding-bottom: 4px;
+        left: 10px;
     }
 }
