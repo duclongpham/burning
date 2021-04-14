@@ -6,7 +6,7 @@
 		    text-align: center;
 		    width: 100%;
 		    position: relative;
-		    margin-bottom: 33px;
+		    margin-bottom: 32px;
 
 		    &:before {
 	    	    content: '';
@@ -86,6 +86,7 @@
 
 			h4 {
 	    	    font-size: @font-size18;
+				margin-top: 16px;
 	    	}
 
 	    	p {
@@ -93,6 +94,9 @@
 	    	}
 		}
 	}
+	.lifestyle-blog {
+        padding-bottom: 23px;
+    }
 }
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
@@ -177,11 +181,12 @@
 
 				img {
 					width: 100%;
+					height: 61.5%;
 				}
 
 				 h4 {
 				 	color: @color-2d;
-				 	margin: 9px 0 10px;
+				 	margin: 15px 0 8px;
 				 }
 
 				 p {
